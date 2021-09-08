@@ -26,13 +26,13 @@ namespace EmployeeApp.Controllers
         {
             try
             {
-                var categories = await employeeRepository.GetEmployees();
-                if (categories == null)
+                var employees = await employeeRepository.GetEmployees();
+                if (employees == null)
                 {
                     return NotFound();
                 }
 
-                return Ok(categories);
+                return Ok(employees);
             }
             catch (Exception)
             {
